@@ -20,7 +20,7 @@ the actual flight route, and weather conditions at the time of flight.
 
 ### Flight level emission estimates
 
-#### Flight level CO<sub>2</sub>e estimates
+#### Flight level CO₂e estimates
 
 The Travel Impact Model estimates fuel burn based on the Tier 3 methodology for
 emission estimates from the
@@ -87,28 +87,28 @@ supported aircraft:
     aircraft type.
 *   The Lower Heating Value from ISO 14083 (43.1 MJ/kg averaged over US and EU
     numbers from [source](https://www.iso.org/standard/78864.html) Table K1 and
-    Table K3) and CORSIA Carbon Intensity value (74 gCO<sub>2</sub>e/MJ from
+    Table K3) and CORSIA Carbon Intensity value (74 gCO₂e/MJ from
     [source](https://www.icao.int/environmental-protection/CORSIA/Documents/CORSIA_Eligible_Fuels/CORSIA_Supporting_Document_CORSIA%20Eligible%20Fuels_LCA_Methodology_V5.pdf)
-    Table 5) are used to calculate the jet fuel combustion to CO<sub>2</sub>e
+    Table 5) are used to calculate the jet fuel combustion to CO₂e
     conversion factor of 3.1894. The CORSIA Life Cycle Assessment methodology is
-    used to calculate a WTT CO<sub>2</sub>e emissions factor of 0.6465 (WTT 15g
-    CO<sub>2</sub>e/MJ added to the TTW 74 gCO<sub>2</sub>e/MJ Carbon Intensity
-    to total up to the WTW lifecycle Carbon Intensity of 89 gCO<sub>2</sub>e/MJ
+    used to calculate a WTT CO₂e emissions factor of 0.6465 (WTT 15g
+    CO₂e/MJ added to the TTW 74 gCO₂e/MJ Carbon Intensity
+    to total up to the WTW lifecycle Carbon Intensity of 89 gCO₂e/MJ
     from
     [source](https://www.icao.int/environmental-protection/CORSIA/Documents/CORSIA_Eligible_Fuels/CORSIA_Supporting_Document_CORSIA%20Eligible%20Fuels_LCA_Methodology_V5.pdf)
     page 22 and Table 7). The factors used are as follows:
 
-Life Cycle Stage | Carbon Intensity Value from CORSIA  <br> (g CO<sub>2</sub>e/MJ) | Lower Heating Value from ISO 14083 <br> (MJ/kg) | Factor <br> (kg CO<sub>2</sub>e/kg)
+Life Cycle Stage | Carbon Intensity Value from CORSIA  <br> (g CO₂e/MJ) | Lower Heating Value from ISO 14083 <br> (MJ/kg) | Factor <br> (kg CO₂e/kg)
 --------------------|-----------------|------|-------------------------------
 Tank-To-Wake (TTW)  | 74              | 43.1 | 3.1894 (= 74 * 43.1 / 1000)
 Well-To-Tank (WTT)  | 15 (= 89 - 74)  | 43.1 | 0.6465 (= 15 * 43.1 / 1000)
 Well-To-Wake (WTW)  | 89              | 43.1 | 3.8359 (= 7894 * 43.1 / 1000)
 
-CO<sub>2</sub>e is short for CO<sub>2</sub> equivalent and includes Kyoto Gases
+CO₂e is short for CO₂ equivalent and includes Kyoto Gases
 (GHG) as described
 [here](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Kyoto_basket#:~:text=The%20Kyoto%20basket%20encompasses%20the,sulphur%20hexafluoride%20\(SF6\)).
 Warming effects produced by short-lived climate pollutants (such as
-contrail-induced cirrus clouds) are not yet included in CO<sub>2</sub>e as
+contrail-induced cirrus clouds) are not yet included in CO₂e as
 calculated by the Travel Impact Model.
 
 There is information for most commonly-used aircraft types in the EEA data, but
@@ -334,13 +334,13 @@ To get the total emissions for the flight, let's follow the process below:
 
         1727 kg + 52970 kg = 54697 kg of fuel burn
 
-4.  Convert from fuel burn to CO<sub>2</sub>e emissions for total flight-level
+4.  Convert from fuel burn to CO₂e emissions for total flight-level
     result:
-    *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e: `54697 * 0.6465 =
+    *   Well-to-Tank (WTT) emissions in kg of CO₂e: `54697 * 0.6465 =
         35362`
-    *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e: `54697 * 3.1894 =
+    *   Tank-to-Wake (TTW) emissions in kg of CO₂e: `54697 * 3.1894 =
         174451`
-    *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e: `(54697 *
+    *   Well-to-Wake (WTW) emissions in kg of CO₂e: `(54697 *
         0.6465) + (54697 * 3.1894) = 209812`
 
 Once the total flight emissions are computed, let's compute the per passenger
@@ -358,72 +358,72 @@ break down:
 
         0 * 5 + 48 * 4 + 1.5 * 21 + 188 * 1 = 411.5
 
-3.  Divide the total CO<sub>2</sub>e emissions by the equivalent capacity
-    calculated above to get the CO<sub>2</sub>e emissions per economy passenger.
-    *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e:
+3.  Divide the total CO₂e emissions by the equivalent capacity
+    calculated above to get the CO₂e emissions per economy passenger.
+    *   Well-to-Tank (WTT) emissions in kg of CO₂e:
         `35362 / 411.5 = 85.934`
-    *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e:
+    *   Tank-to-Wake (TTW) emissions in kg of CO₂e:
         `174451 / 411.5 = 423.939`
-    *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e:
+    *   Well-to-Wake (WTW) emissions in kg of CO₂e:
         `85.934 + 423.939 = 509.873`
 
 4.  Emissions per passenger for other cabins can be derived by multiplying by
     the corresponding cabin factor.
     *   First:
-        *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Tank (WTT) emissions in kg of CO₂e:
             `85.934 * 5 = 429.67`
-        *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e:
+        *   Tank-to-Wake (TTW) emissions in kg of CO₂e:
             `423.939 * 5 = 2119.695`
-        *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Wake (WTW) emissions in kg of CO₂e:
             `509.873 * 5 = 2549.365`
     *   Business:
-        *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Tank (WTT) emissions in kg of CO₂e:
             `85.934 * 4 = 343.736`
-        *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e:
+        *   Tank-to-Wake (TTW) emissions in kg of CO₂e:
             `423.939 * 4 = 1695.756`
-        *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Wake (WTW) emissions in kg of CO₂e:
             `509.873 * 4 = 2039.492`
     *   Premium Economy:
-        *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Tank (WTT) emissions in kg of CO₂e:
             `85.934 * 1.5 = 128.901`
-        *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e:
+        *   Tank-to-Wake (TTW) emissions in kg of CO₂e:
             `423.939 * 1.5 = 635.909`
-        *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Wake (WTW) emissions in kg of CO₂e:
             `509.873 * 1.5 = 764.81`
     *   Economy:
-        *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e: `85.934`
-        *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e: `423.939`
-        *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e: `509.873`
+        *   Well-to-Tank (WTT) emissions in kg of CO₂e: `85.934`
+        *   Tank-to-Wake (TTW) emissions in kg of CO₂e: `423.939`
+        *   Well-to-Wake (WTW) emissions in kg of CO₂e: `509.873`
 
 5.  Scale to estimated load factor 0.845 by apportioning emissions to occupied
     seats:
     *   First:
-        *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Tank (WTT) emissions in kg of CO₂e:
             `429.67 / 0.845 = 508.485`
-        *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e:
+        *   Tank-to-Wake (TTW) emissions in kg of CO₂e:
             `2119.695 / 0.845 = 2508.515`
-        *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Wake (WTW) emissions in kg of CO₂e:
             `2549.365 / 0.845 = 3017`
     *   Business:
-        *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Tank (WTT) emissions in kg of CO₂e:
             `343.736 / 0.845 = 406.788`
-        *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e:
+        *   Tank-to-Wake (TTW) emissions in kg of CO₂e:
             `1695.756 / 0.845 = 2006.812`
-        *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Wake (WTW) emissions in kg of CO₂e:
             `2039.492 / 0.845 = 2413.6`
     *   Premium Economy:
-        *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Tank (WTT) emissions in kg of CO₂e:
             `128.901 / 0.845 = 152.546`
-        *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e:
+        *   Tank-to-Wake (TTW) emissions in kg of CO₂e:
             `635.909 / 0.845 = 752.555`
-        *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Wake (WTW) emissions in kg of CO₂e:
             `764.81 / 0.845 = 905.101`
     *   Economy:
-        *   Well-to-Tank (WTT) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Tank (WTT) emissions in kg of CO₂e:
             `85.934 / 0.845 = 101.697`
-        *   Tank-to-Wake (TTW) emissions in kg of CO<sub>2</sub>e:
+        *   Tank-to-Wake (TTW) emissions in kg of CO₂e:
             `423.939 / 0.845 = 501.703`
-        *   Well-to-Wake (WTW) emissions in kg of CO<sub>2</sub>e:
+        *   Well-to-Wake (WTW) emissions in kg of CO₂e:
             `509.873 / 0.845 = 603.4`
 
 Note that the model generates emission estimates for all cabin classes,
@@ -491,17 +491,17 @@ deviation from average load factor since 2017, resulting in removing March
 ### 1.8.0
 
 Adding Well-to-Tank (WTT) and Tank-to-Wake (TTW) emissions break-downs to all
-flight emissions. Updating the jet fuel combustion to CO<sub>2</sub> conversion
+flight emissions. Updating the jet fuel combustion to CO₂ conversion
 factor from the minimum value of 3.1672 to the value of 3.1894 (using Lower
 Heating Value from ISO 14083 and CORSIA Carbon Intensity value), and using the
-CORSIA Life Cycle Assessment methodology to implement a WTT CO<sub>2</sub>e
+CORSIA Life Cycle Assessment methodology to implement a WTT CO₂e
 emissions factor 0.6465. Reference:
 [ISO](https://www.iso.org/standard/78864.html),
 [CORSIA](https://www.icao.int/environmental-protection/CORSIA/Documents/CORSIA_Eligible_Fuels/CORSIA_Supporting_Document_CORSIA%20Eligible%20Fuels_LCA_Methodology_V5.pdf).
 
 ### 1.7.0
 
-Updating the jet fuel combustion to CO<sub>2</sub> conversion factor from 3.15
+Updating the jet fuel combustion to CO₂ conversion factor from 3.15
 based on the EEA methodology to 3.1672 to align with the
 [CORSIA methodology's](https://www.icao.int/environmental-protection/CORSIA/Documents/CORSIA_Eligible_Fuels/CORSIA_Supporting_Document_CORSIA%20Eligible%20Fuels_LCA_Methodology_V5.pdf)
 recommended factor.
@@ -524,15 +524,15 @@ back to the "Seats (Equipment Configuration) File" provided by OAG is performed.
 ### 1.5.0
 
 Following recent discussions with academic and industry partners, we are
-adjusting the TIM to focus on CO<sub>2</sub> emissions. While we strongly
-believe in including non-CO<sub>2</sub> effects in the model long-term, the
+adjusting the TIM to focus on CO₂ emissions. While we strongly
+believe in including non-CO₂ effects in the model long-term, the
 details of how and when to include these factors requires more input from our
 stakeholders as part of a governance model that's in development. With this
-change, we are provisionally removing contrails effects from our CO<sub>2</sub>e
-estimates but will keep the labeling as “CO<sub>2</sub>e” in the model to ensure
+change, we are provisionally removing contrails effects from our CO₂e
+estimates but will keep the labeling as “CO₂e” in the model to ensure
 future compatibility.
 
-We believe CO<sub>2</sub>e factors are critical to include in the model, given
+We believe CO₂e factors are critical to include in the model, given
 the emphasis on them in the IPCC's AR6 report. We want to make sure that when we
 do incorporate them into the model, we have a strong plan to account for time of
 day and regional variations in contrails' warming impact. We are committed to
@@ -597,7 +597,7 @@ in emissions as calculated by the Travel Impact Model.
 
 ## Data quality
 
-The CO<sub>2</sub> estimates were validated by comparing against a limited
+The CO₂ estimates were validated by comparing against a limited
 amount of real-world fuel burn data. The finding was that the TIM is
 underestimating by 7% on average.
 
@@ -647,12 +647,12 @@ We welcome feedback and enquiries. Please get in touch using this
 **CCD:** The flight phases *Climb*, *Cruise*, *and* *Descend* occur above a
 flight altitude of 3,000 feet.
 
-**CO<sub>2</sub>**: Carbon dioxide is the most significant long-lived greenhouse
+**CO₂**: Carbon dioxide is the most significant long-lived greenhouse
 gas in Earth's atmosphere. Since the Industrial Revolution anthropogenic
 emissions – primarily from use of fossil fuels and deforestation – have rapidly
 increased its concentration in the atmosphere, leading to global warming.
 
-**CO<sub>2</sub>e**: CO<sub>2</sub>e is short for CO<sub>2</sub> equivalent, and
+**CO₂e**: CO₂e is short for CO₂ equivalent, and
 is a metric measure used to compare the emissions from various greenhouse gases
 on the basis of their global-warming potential (GWP), by converting amounts of
 other gases to the equivalent amount of carbon dioxide with the same global
@@ -705,7 +705,7 @@ of the atmosphere.
 
 **Short Lived Climate Pollutants (SLCPs):** Pollutants that stay in the
 atmosphere for a short time (e.g. weeks) in comparison to Long Lived Climate
-Pollutants such as CO<sub>2</sub> that stay in the atmosphere for hundreds of
+Pollutants such as CO₂ that stay in the atmosphere for hundreds of
 years.
 
 **Tank-to-Wake
